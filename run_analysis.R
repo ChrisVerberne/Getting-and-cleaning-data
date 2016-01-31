@@ -61,4 +61,4 @@ colnames(dt_meanstd)[2] <- "activity"
 # 
 by_subject_activity<-group_by(dt_meanstd, subject, activity)
 tidy<-summarise_each(by_subject_activity, funs(mean))
-write.table(tidy, file = "tidy.txt")
+write.table(tidy, file = "tidy.txt", row.names=FALSE)
